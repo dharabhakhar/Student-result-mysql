@@ -1,0 +1,64 @@
+<button><a href="/max10">Max 10 Record</a></button>
+<button><a href="/max5">Max 5 Record</a></button>
+
+<form action="" method="post">
+    <table>
+        <tr>
+            <td>Name : </td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>Gujarati : </td>
+            <td><input type="text" name="sub_1"></td>
+        </tr>
+        <tr>
+            <td>English : </td>
+            <td><input type="text" name="sub_2"></td>
+        </tr>
+        <tr>
+            <td>Hindi : </td>
+            <td><input type="text" name="sub_3"></td>
+        </tr>
+        <tr>
+            <td>Science : </td>
+            <td><input type="text" name="sub_4"></td>
+        </tr>
+        <tr>
+            <td>Maths : </td>
+            <td><input type="text" name="sub_5"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Submit"></td>
+        </tr>
+    </table>
+</form>
+
+<table border="1" cellpadding="15px" width="80%" align="center">
+    <tr>
+        <th>No</th>
+        <th width="15%">Name</th>
+        <th>Gujarati</th>
+        <th>English</th>
+        <th>Hindi</th>
+        <th>Science</th>
+        <th>Maths</th>
+        <th>Total</th>
+        <th>Avg</th>
+        <th>Results</th>
+    </tr>
+
+    <% results.forEach(function(user){  %>
+        <tr>
+            <td><%= user.id %></td>
+            <td><%= user.name %></td>
+            <td><%= user.sub_1 %></td>
+            <td><%= user.sub_2 %></td>
+            <td><%= user.sub_3 %></td>
+            <td><%= user.sub_4 %></td>
+            <td><%= user.sub_5 %></td>
+            <td><%= user.total %></td>
+            <td><%= user.avg %></td>
+            <td><%= user.res %></td>
+        </tr>
+    <% }) %>
+    </table>

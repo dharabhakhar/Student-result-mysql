@@ -1,0 +1,18 @@
+<table border="1" cellpadding="15px" width="80%" align="center">
+    <% results.forEach(function(user){  %>
+        <% if (user.res== 'Pass'){ %>
+        <tr>
+            <td><%= user.id %></td>
+            <td><%= user.name %></td>
+            <td><%= user.sub_1 %></td>
+            <td><%= user.sub_2 %></td>
+            <td><%= user.sub_3 %></td>
+            <td><%= user.sub_4 %></td>
+            <td><%= user.sub_5 %></td>
+            <td><%= user.total %></td>
+            <td><%= user.avg %></td>
+            <td><%= user.res %></td>
+        </tr>
+        <% } %>
+    <% }) %>
+    </table>
